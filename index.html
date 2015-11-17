@@ -31,14 +31,14 @@ function drawBall() {
 function draw() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	drawBall();
-	x += dx;
-	y += dy;
 	if(x + dx > canvas.width-ballRadius || x + dx < 0) {
     dx = -dx;
     }
     if(y + dy > canvas.height-ballRadius || y + dy < 0) {
     dy = -dy;
     }
+    x += dx;
+	y += dy;
 }
 
 setInterval(draw, 10);
