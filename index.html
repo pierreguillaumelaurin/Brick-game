@@ -68,9 +68,16 @@ function draw() {
     dx = -dx;
     ctx.fillStyle = "#"+((1<<24)*Math.random()|0).toString(16);
     }
-    if(y + dy > canvas.height-ballRadius || y + dy < 0) {
+    if(y + dy < ballRadius) {
     dy = -dy;
-    ctx.fillStyle = "#"+((1<<24)*Math.random()|0).toString(16);
+    } else if (y + dy > canvas.height - ballRadius) {
+        if (x > paddleX && x < paddleX + paddleWidth) {
+            dy = -dy;
+        }
+        else {
+            alert("GAME OVER");
+            document.location.reload();
+        }
     }
     x += dx;
 	y += dy;
