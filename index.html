@@ -10,10 +10,12 @@
 </head>
 <body>
 
-<canvas id="myCanvas" width="880" height="520"></canvas>
+<canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
 var canvas = document.getElementById("myCanvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
 var y = canvas.height;
@@ -43,8 +45,6 @@ document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
 
 //resize canvas to occupy the full page
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
