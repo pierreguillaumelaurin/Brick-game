@@ -10,19 +10,19 @@
 </head>
 <body>
 
-<canvas id="myCanvas" width="880" height="620"></canvas>
+<canvas id="myCanvas" width="880" height="520"></canvas>
 
 <script>
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
-var y = canvas.height-30;
-var dx = canvas.width/125;
-var dy = canvas.height/80;
+var y = canvas.height;
+var dx = canvas.width/200;
+var dy = canvas.height/110;
 var ballRadius = canvas.width/50;
 var paddleHeight = canvas.height/32;
 var paddleWidth = canvas.width/6.4;
-var paddleX = (canvas.width-paddleWidth)/2;
+var paddleX = (canvas.width-paddleWidth)/10;
 var rightPressed = false;
 var leftPressed = false;
 //brick related variables
@@ -30,7 +30,7 @@ var brickRowCount = 3;
 var brickColumnCount = 5;
 var brickWidth = canvas.width/6.4;
 var brickHeight = canvas.height/16;
-var brickPadding = canvas.width*canvas.height/15360;
+var brickPadding = canvas.width*canvas.height/15300;
 var brickOffsetTop = canvas.height/11;
 var brickOffsetLeft = canvas.width/16;
 //score related variables
